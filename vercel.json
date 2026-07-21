@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd web && npx prisma generate && npx prisma migrate deploy && SCRIPTS_ROOT=../scripts node scripts/sync-scripts-to-db.mjs && npm run build",
+  "installCommand": "cd web && npm ci",
+  "framework": "nextjs",
+  "outputDirectory": "web/.next"
+}
