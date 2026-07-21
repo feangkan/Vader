@@ -49,13 +49,27 @@ Catalog auto-syncs from `scripts/` when an approved user opens `/catalog`, or cl
 
 See [scripts/README.md](scripts/README.md).
 
-## Rhino plugin
+## Try it in Rhino (same PC)
 
-Build on Windows with Rhino 8 installed — see [plugin/README.md](plugin/README.md).
+The Vader API must run on the **same machine** as Rhino (or be publicly deployed). Cloud `localhost` is not reachable from your desktop.
 
-Command: `Vader`
+```bash
+cd web
+cp .env.example .env   # Windows: copy .env.example .env
+npm install
+npx prisma migrate dev
+npm run db:seed
+npm run dev
+```
 
-Configure panel with your web URL and the same `PLUGIN_API_KEY` as the server.
+Then in Rhino 8 Script Editor, open and run:
+
+[`plugin/vader_bootstrap.py`](plugin/vader_bootstrap.py)
+
+Sign in with an approved account → Refresh → select a script → **Run selected**.
+
+Full C# `.rhp` build steps: [plugin/README.md](plugin/README.md).
+
 
 ## Environment variables (`web/.env`)
 
