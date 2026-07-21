@@ -1,0 +1,9 @@
+{
+  "id": "my-script-id",
+  "name": "My Script Name",
+  "description": "Short description of what this script does in Rhino.",
+  "category": "utilities",
+  "tags": ["example"],
+  "rhinoVersion": "8",
+  "version": "1.0.0"
+}

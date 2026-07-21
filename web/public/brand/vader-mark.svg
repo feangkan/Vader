@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" role="img" aria-label="Vader">
+  <!-- Original geometric mark inspired by a mask silhouette  not a licensed character -->
+  <defs>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f5f7"/>
+      <stop offset="100%" stop-color="#a1a1aa"/>
+    </linearGradient>
+  </defs>
+  <!-- Dome / flared helm -->
+  <path
+    d="M60 8
+       C88 8 102 28 104 48
+       L108 78
+       C109 88 104 94 96 96
+       L84 100
+       L60 112
+       L36 100
+       L24 96
+       C16 94 11 88 12 78
+       L16 48
+       C18 28 32 8 60 8Z"
+    fill="#0a0a0b"
+    stroke="url(#edge)"
+    stroke-width="1.5"
+  />
+  <!-- Eye slits (negative space feel via lighter cutouts) -->
+  <path d="M28 52 C36 44 48 46 52 54 C46 58 36 58 28 52Z" fill="#c8c8ce"/>
+  <path d="M92 52 C84 44 72 46 68 54 C74 58 84 58 92 52Z" fill="#c8c8ce"/>
+  <!-- Bridge -->
+  <path d="M56 50 L60 62 L64 50 Z" fill="#9a9aa3"/>
+  <!-- Lower V / grille suggestion -->
+  <path d="M42 78 L60 104 L78 78 L70 76 L60 90 L50 76 Z" fill="#c8c8ce"/>
+  <path d="M52 82 L54 92" stroke="#0a0a0b" stroke-width="2" stroke-linecap="round"/>
+  <path d="M58 84 L58 96" stroke="#0a0a0b" stroke-width="2" stroke-linecap="round"/>
+  <path d="M62 84 L62 96" stroke="#0a0a0b" stroke-width="2" stroke-linecap="round"/>
+  <path d="M66 82 L68 92" stroke="#0a0a0b" stroke-width="2" stroke-linecap="round"/>
+</svg>

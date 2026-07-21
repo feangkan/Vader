@@ -1,0 +1,9 @@
+{
+  "id": "draw-circle",
+  "name": "Draw Circle",
+  "description": "Creates a unit circle centered at the origin on the XY plane.",
+  "category": "geometry",
+  "tags": ["circle", "curve", "geometry"],
+  "rhinoVersion": "8",
+  "version": "1.0.0"
+}

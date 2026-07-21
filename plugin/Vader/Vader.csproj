@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <UseWPF>false</UseWPF>
+    <UseWindowsForms>false</UseWindowsForms>
+    <RootNamespace>Vader</RootNamespace>
+    <AssemblyName>Vader</AssemblyName>
+    <Version>0.1.0</Version>
+    <Description>Vader — run protected Rhino Python scripts without exposing source</Description>
+    <!-- Rhino will load the built .rhp from Yak or Plugins folder -->
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Point this at your Rhino 8 System folder when building on Windows -->
+    <RhinoSystemDir Condition="'$(RhinoSystemDir)' == ''">C:\Program Files\Rhino 8\System</RhinoSystemDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="RhinoCommon">
+      <HintPath>$(RhinoSystemDir)\RhinoCommon.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Eto">
+      <HintPath>$(RhinoSystemDir)\Eto.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Rhino.UI">
+      <HintPath>$(RhinoSystemDir)\Rhino.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="CopyRhp" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetPath)" DestinationFiles="$(TargetDir)Vader.rhp" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

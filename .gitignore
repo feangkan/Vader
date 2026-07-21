@@ -1,0 +1,52 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+coverage/
+
+# next.js
+web/.next/
+web/out/
+
+# production
+build/
+dist/
+
+# env
+.env
+.env*.local
+web/.env
+
+# prisma / sqlite
+*.db
+*.db-journal
+web/prisma/dev.db
+web/prisma/dev.db-journal
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# plugin build
+plugin/Vader/bin/
+plugin/Vader/obj/
+
+# misc
+.agents/
+.claude/
+.windsurf/
+skills-lock.json

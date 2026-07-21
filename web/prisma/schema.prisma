@@ -1,0 +1,57 @@
+// Prisma schema for Vader beta
+// https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String     @id @default(cuid())
+  email        String     @unique
+  passwordHash String
+  status       String     @default("pending") // pending | approved | rejected
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  feedback     Feedback[]
+  runTokens    RunToken[]
+}
+
+model Script {
+  id           String   @id
+  name         String
+  description  String
+  category     String
+  tags         String   @default("[]")
+  rhinoVersion String   @default("8")
+  version      String   @default("1.0.0")
+  relativePath String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  runTokens    RunToken[]
+}
+
+model Feedback {
+  id        String   @id @default(cuid())
+  userId    String
+  subject   String
+  body      String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model RunToken {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  userId    String
+  scriptId  String
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  script    Script   @relation(fields: [scriptId], references: [id], onDelete: Cascade)
+}

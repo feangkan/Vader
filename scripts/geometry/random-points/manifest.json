@@ -1,0 +1,9 @@
+{
+  "id": "random-points",
+  "name": "Random Points",
+  "description": "Scatters 25 random points inside a 10x10x10 box around the origin.",
+  "category": "geometry",
+  "tags": ["points", "random", "scatter"],
+  "rhinoVersion": "8",
+  "version": "1.0.0"
+}
