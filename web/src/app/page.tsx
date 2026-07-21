@@ -21,6 +21,9 @@ export default function HomePage() {
           <Link href="/team" className="btn btn-ghost">
             Team setup
           </Link>
+          <Link href="/login" className="btn btn-ghost">
+            Sign in
+          </Link>
         </div>
       </main>
     </>

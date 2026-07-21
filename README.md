@@ -58,9 +58,12 @@ See [scripts/README.md](scripts/README.md).
 
 ## Environment variables (`web/.env`)
 
+Neon needs **two** URLs (Connection pooling ON = `DATABASE_URL`, OFF = `DIRECT_URL`):
+
 | Variable | Purpose |
 |----------|---------|
-| `DATABASE_URL` | SQLite locally; **Postgres in production** |
+| `DATABASE_URL` | Neon **pooled** connection (app runtime) |
+| `DIRECT_URL` | Neon **direct** connection (migrations) |
 | `NEXTAUTH_URL` | Public site URL |
 | `NEXT_PUBLIC_APP_URL` | Shown on /team for connector setup |
 | `NEXTAUTH_SECRET` | Session secret |
