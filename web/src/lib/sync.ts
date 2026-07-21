@@ -1,5 +1,13 @@
+import fs from "fs";
+import path from "path";
 import { prisma } from "./prisma";
-import { discoverScripts } from "./scripts";
+import { discoverScripts, getScriptsRoot } from "./scripts";
+
+function readSourceFromDisk(relativePath: string): string | null {
+  const full = path.join(getScriptsRoot(), relativePath, "script.py");
+  if (!fs.existsSync(full)) return null;
+  return fs.readFileSync(full, "utf8");
+}
 
 export async function syncScriptsFromDisk() {
   const discovered = discoverScripts();
@@ -7,6 +15,7 @@ export async function syncScriptsFromDisk() {
 
   for (const s of discovered) {
     seen.add(s.id);
+    const source = readSourceFromDisk(s.relativePath);
     await prisma.script.upsert({
       where: { id: s.id },
       create: {
@@ -18,6 +27,7 @@ export async function syncScriptsFromDisk() {
         rhinoVersion: s.rhinoVersion,
         version: s.version,
         relativePath: s.relativePath,
+        source,
       },
       update: {
         name: s.name,
@@ -27,6 +37,7 @@ export async function syncScriptsFromDisk() {
         rhinoVersion: s.rhinoVersion,
         version: s.version,
         relativePath: s.relativePath,
+        source,
       },
     });
   }

@@ -5,10 +5,12 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "build:deploy": "prisma generate && prisma migrate deploy && node scripts/sync-scripts-to-db.mjs && next build",
     "start": "next start",
     "lint": "eslint",
     "db:migrate": "prisma migrate dev",
     "db:seed": "node scripts/seed-admin.mjs",
+    "db:sync-scripts": "node scripts/sync-scripts-to-db.mjs",
     "postinstall": "prisma generate"
   },
   "dependencies": {

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { consumeRunToken, isPluginRequest } from "@/lib/run-token";
-import { readScriptSource } from "@/lib/scripts";
+import { getScriptSource } from "@/lib/script-source";
 
 type Ctx = { params: Promise<{ id: string }> };
 
@@ -35,7 +35,7 @@ export async function GET(req: Request, ctx: Ctx) {
     return NextResponse.json({ error: "Script not found" }, { status: 404 });
   }
 
-  const source = readScriptSource(script.relativePath);
+  const source = await getScriptSource(script.id, script.relativePath);
   if (source == null) {
     return NextResponse.json({ error: "Script file missing on server" }, { status: 404 });
   }

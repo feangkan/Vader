@@ -37,6 +37,7 @@ export function SiteHeader({
         {email ? (
           <>
             <Link href="/catalog">Catalog</Link>
+            <Link href="/team">Team</Link>
             <Link href="/feedback">Feedback</Link>
             {isAdmin && <Link href="/admin">Admin</Link>}
             <span className="nav-email">{email}</span>
@@ -47,6 +48,7 @@ export function SiteHeader({
         ) : (
           <>
             <Link href="/login">Sign in</Link>
+            <Link href="/team">Team setup</Link>
             <Link href="/register" className="btn-nav">
               Request access
             </Link>

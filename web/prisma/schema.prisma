@@ -30,6 +30,7 @@ model Script {
   rhinoVersion String   @default("8")
   version      String   @default("1.0.0")
   relativePath String
+  source       String?  // stored on sync for cloud deploy (never sent to browsers)
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
   runTokens    RunToken[]

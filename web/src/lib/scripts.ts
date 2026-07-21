@@ -69,7 +69,7 @@ export function discoverScripts(root = getScriptsRoot()): DiscoveredScript[] {
   return results;
 }
 
-export function readScriptSource(relativePath: string): string | null {
+export function readScriptSourceFromDisk(relativePath: string): string | null {
   const full = path.join(getScriptsRoot(), relativePath, "script.py");
   if (!fs.existsSync(full)) return null;
   return fs.readFileSync(full, "utf8");

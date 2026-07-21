@@ -11,14 +11,15 @@ export default function HomePage() {
         </div>
         <h1 className="hero-brand fade-up-delay">VADER</h1>
         <p className="hero-line fade-up-delay-2">
-          Ready-to-use Rhino Python scripts — categorized, synced, and run only through Vader.
+          Web catalog for your team. Browse and approve on the site — run inside Rhino without
+          exposing source.
         </p>
         <div className="hero-ctas fade-up-delay-2">
           <Link href="/register" className="btn btn-primary">
             Request beta access
           </Link>
-          <Link href="/login" className="btn btn-ghost">
-            Sign in
+          <Link href="/team" className="btn btn-ghost">
+            Team setup
           </Link>
         </div>
       </main>
