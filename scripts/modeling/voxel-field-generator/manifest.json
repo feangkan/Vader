@@ -1,0 +1,14 @@
+{
+  "id": "voxel-field-generator",
+  "name": "Voxel Field Generator",
+  "description": "3D voxel field generator with EPW-hourly climate analysis and zone classification.",
+  "category": "modeling",
+  "tags": [
+    "voxels",
+    "field",
+    "climate",
+    "epw"
+  ],
+  "rhinoVersion": "8",
+  "version": "8.0.0"
+}

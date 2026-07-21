@@ -1,0 +1,14 @@
+{
+  "id": "discrete-element-modular",
+  "name": "Discrete Element Modular Modifier",
+  "description": "Discrete modular modifier with timber joints, pipe facade, and noise-mode agent patterns.",
+  "category": "modeling",
+  "tags": [
+    "discrete",
+    "modular",
+    "timber",
+    "facade"
+  ],
+  "rhinoVersion": "8",
+  "version": "7.0.0"
+}

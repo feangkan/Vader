@@ -1,0 +1,14 @@
+{
+  "id": "space-colonization",
+  "name": "Space Colonization Algorithm",
+  "description": "Space colonization networks with point attractor field and structural/voxel/facade/climate modes.",
+  "category": "simulation",
+  "tags": [
+    "sca",
+    "colonization",
+    "branching",
+    "attractor"
+  ],
+  "rhinoVersion": "8",
+  "version": "4.0.0"
+}

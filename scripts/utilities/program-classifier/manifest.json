@@ -1,0 +1,13 @@
+{
+  "id": "program-classifier",
+  "name": "Program Classifier",
+  "description": "Zone-aware makerspace/research program classifier that assigns programs by floor band and character.",
+  "category": "utilities",
+  "tags": [
+    "program",
+    "classifier",
+    "zoning"
+  ],
+  "rhinoVersion": "8",
+  "version": "7.0.0"
+}

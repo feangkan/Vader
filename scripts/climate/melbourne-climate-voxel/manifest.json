@@ -1,0 +1,14 @@
+{
+  "id": "melbourne-climate-voxel",
+  "name": "Melbourne Climate Voxel Attractor",
+  "description": "Melbourne solar-aware voxel attractor field with heat index, auto-fit, and climate scoring.",
+  "category": "climate",
+  "tags": [
+    "melbourne",
+    "climate",
+    "voxels",
+    "solar"
+  ],
+  "rhinoVersion": "8",
+  "version": "7.0.0"
+}

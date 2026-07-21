@@ -1,0 +1,14 @@
+{
+  "id": "distribution-voxels",
+  "name": "Distribution Voxels",
+  "description": "Distribute architectural elements across program-colored voxel layers (Room, Facade, Structure, Ornament, Circulation, Skywalk).",
+  "category": "modeling",
+  "tags": [
+    "voxels",
+    "distribution",
+    "facade",
+    "circulation"
+  ],
+  "rhinoVersion": "8",
+  "version": "16.0.0"
+}

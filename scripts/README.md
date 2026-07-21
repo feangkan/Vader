@@ -31,15 +31,19 @@ cp -r scripts/_template scripts/geometry/my-script-name
 ```
 scripts/
   _template/          # copy this for new scripts
+  climate/
   geometry/
-  utilities/
   modeling/
+  simulation/
+  utilities/
   annotation/
   <your-category>/
     <script-id>/
       script.py
       manifest.json
 ```
+
+Do **not** drop loose `.py` files at the `scripts/` root — put each script in its own folder with a `manifest.json` (or copy `_template/`).
 
 ## Rules
 

@@ -1,0 +1,14 @@
+{
+  "id": "site-model-generator",
+  "name": "Site Model Generator",
+  "description": "Generate a 3D site model with building Breps from Google Maps / OSM Overpass data.",
+  "category": "utilities",
+  "tags": [
+    "site",
+    "osm",
+    "buildings",
+    "maps"
+  ],
+  "rhinoVersion": "8",
+  "version": "2.0.0"
+}

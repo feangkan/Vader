@@ -1,0 +1,14 @@
+{
+  "id": "climate-comfort-agent",
+  "name": "Climate Comfort Agent",
+  "description": "Solar-only climate stamper for voxel fields \u2014 EPW month analysis, bake Passive/Marginal/Overheated climate voxels.",
+  "category": "climate",
+  "tags": [
+    "climate",
+    "solar",
+    "voxels",
+    "epw"
+  ],
+  "rhinoVersion": "8",
+  "version": "3.0.0"
+}

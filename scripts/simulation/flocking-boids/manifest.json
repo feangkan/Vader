@@ -1,0 +1,14 @@
+{
+  "id": "flocking-boids",
+  "name": "Flocking Boids",
+  "description": "Reynolds flocking simulation for architecture with SCA-grade module aggregation and joints.",
+  "category": "simulation",
+  "tags": [
+    "boids",
+    "flocking",
+    "aggregation",
+    "simulation"
+  ],
+  "rhinoVersion": "8",
+  "version": "3.0.0"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "differential-growth-formfinding",
+  "name": "Differential Growth Formfinding",
+  "description": "Live topography generator with differential growth formfinding UI for Rhino.",
+  "category": "modeling",
+  "tags": [
+    "formfinding",
+    "growth",
+    "topography"
+  ],
+  "rhinoVersion": "8",
+  "version": "5.0.0"
+}

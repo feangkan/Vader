@@ -1,0 +1,14 @@
+{
+  "id": "mas-swarm-stigmergy",
+  "name": "MAS & Swarm (Stigmergy)",
+  "description": "Multi-agent stigmergy swarm with connector-mode edge aggregation for discrete assembly paths.",
+  "category": "simulation",
+  "tags": [
+    "swarm",
+    "stigmergy",
+    "mas",
+    "aggregation"
+  ],
+  "rhinoVersion": "8",
+  "version": "8.0.0"
+}
