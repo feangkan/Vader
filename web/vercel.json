@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "npx prisma generate && npx prisma migrate deploy && SCRIPTS_ROOT=../scripts node scripts/sync-scripts-to-db.mjs && npm run build",
+  "buildCommand": "SCRIPTS_ROOT=../scripts npm run build:deploy",
   "installCommand": "npm ci",
   "framework": "nextjs"
 }
